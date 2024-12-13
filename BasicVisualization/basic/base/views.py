@@ -10,8 +10,13 @@ def chart_view(request):
     labels = ['January', 'February', 'March', 'April']
     data = [12, 19, 3, 5]
 
+    pie_labels = ['Red', 'Blue', 'Yellow']
+    pie_data = [12, 19, 3]
+
     # Pass data to the template
     return render(request, 'chart_page.html', {
         'labels': labels,
-        'data': data
+        'data': data,
+        'pie_labels': pie_labels,
+        'pie_data': pie_data,
     })
